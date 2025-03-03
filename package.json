@@ -1,0 +1,48 @@
+{
+  "name": "mcp-figma",
+  "version": "0.1.0",
+  "description": "Figma MCP server for accessing Figma API",
+  "main": "build/index.js",
+  "type": "module",
+  "bin": {
+    "mcp-figma": "build/index.js"
+  },
+  "files": [
+    "build",
+    "README.md",
+    "USAGE.md"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "start": "node build/index.js",
+    "prepublishOnly": "npm run build"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^0.4.0",
+    "axios": "^1.6.2",
+    "zod": "^3.22.4"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "typescript": "^5.3.2"
+  },
+  "keywords": [
+    "figma",
+    "api",
+    "mcp",
+    "model-context-protocol"
+  ],
+  "author": "Noah",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/noahcn/mcp-figma.git"
+  },
+  "bugs": {
+    "url": "https://github.com/noahcn/mcp-figma/issues"
+  },
+  "homepage": "https://github.com/noahcn/mcp-figma#readme",
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}
