@@ -29,7 +29,7 @@ export class ConfigManager {
     }
     saveConfig() {
         try {
-            fs.writeFileSync(this.configPath, JSON.stringify(this.config, null, 2));
+            fs.writeFileSync(this.configPath, JSON.stringify(this.config, null, 2), { mode: 0o600 });
         }
         catch (error) {
             console.error('Failed to save config:', error);
